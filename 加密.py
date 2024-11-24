@@ -54,12 +54,12 @@ root.withdraw()
 # 开始循环
 while True:
     task = get_task()
-    if task == '加密':
+    if task == '加密' or task == 'e':
         message = get_message()
         encrypted = swap_letters1(message)
         messagebox.showinfo('消息的密文是:', encrypted)
         write_to_file(encrypted, '超密.txt')
-    elif task == '解密':
+    elif task == '解密' or task == 'd':
         message = get_message()
         decrypted = swap_letters2(message)
         messagebox.showinfo('消息的明文是:', decrypted)
